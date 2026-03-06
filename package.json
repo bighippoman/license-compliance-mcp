@@ -1,0 +1,47 @@
+{
+  "name": "license-compliance-mcp",
+  "version": "1.0.0",
+  "description": "MCP server that scans npm project dependencies for license compliance issues",
+  "type": "module",
+  "main": "build/index.js",
+  "bin": {
+    "license-compliance-mcp": "build/index.js"
+  },
+  "files": [
+    "build",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "start": "node build/index.js",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "mcp",
+    "license",
+    "compliance",
+    "spdx",
+    "audit",
+    "npm"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.27.1",
+    "license-checker-rseidelsohn": "^4.4.2",
+    "spdx-correct": "^3.2.0",
+    "spdx-expression-parse": "^4.0.0",
+    "spdx-license-ids": "^3.0.20",
+    "spdx-satisfies": "^6.0.0",
+    "zod": "^4.3.6"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.7.0",
+    "vitest": "^3.0.0"
+  }
+}
