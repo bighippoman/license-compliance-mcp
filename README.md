@@ -31,24 +31,9 @@ Get a plain-language explanation of any SPDX license — permissions, conditions
 claude mcp add license-compliance -- npx -y license-compliance-mcp
 ```
 
-### Claude Desktop
+### Claude Desktop / Cursor
 
-Add to `claude_desktop_config.json`:
-
-```json
-{
-  "mcpServers": {
-    "license-compliance": {
-      "command": "npx",
-      "args": ["-y", "license-compliance-mcp"]
-    }
-  }
-}
-```
-
-### Cursor
-
-Add to `.cursor/mcp.json`:
+Add to your config (`claude_desktop_config.json` or `.cursor/mcp.json`):
 
 ```json
 {
@@ -74,6 +59,3 @@ Add to `.cursor/mcp.json`:
 - Node.js >= 18
 - Project must have `node_modules` installed (`npm install`)
 
-## License
-
-MIT
