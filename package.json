@@ -1,6 +1,6 @@
 {
   "name": "license-compliance-mcp",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "MCP server that scans npm project dependencies for license compliance issues",
   "type": "module",
   "main": "build/index.js",
@@ -26,6 +26,7 @@
     "audit",
     "npm"
   ],
+  "mcpName": "io.github.bighippoman/license-compliance",
   "license": "MIT",
   "engines": {
     "node": ">=18"
